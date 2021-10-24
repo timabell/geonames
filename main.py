@@ -18,9 +18,12 @@ z = 1 * np.outer(np.ones(np.size(u)), np.cos(v))
 
 #for i in range(2):
 #    ax.plot_surface(x+random.randint(-5,5), y+random.randint(-5,5), z+random.randint(-5,5),  rstride=4, cstride=4, color='b', linewidth=0, alpha=0.5)
+
 elev = 10.0
 rot = 80.0 / 180 * np.pi
-ax.plot_surface(x, y, z,  rstride=4, cstride=4, color='b', linewidth=0, alpha=0.5)
+
+# surface of sphere
+ax.plot_surface(x, y, z,  rstride=4, cstride=4, color='b', linewidth=0, alpha=0.25)
 
 #calculate vectors for "vertical" circle
 a = np.array([-np.sin(elev / 180 * np.pi), 0, np.cos(elev / 180 * np.pi)])
