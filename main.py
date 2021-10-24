@@ -12,9 +12,9 @@ ax.set_aspect('auto')
 u = np.linspace(0, 2 * np.pi, 100)
 v = np.linspace(0, np.pi, 100)
 
-x = 1 * np.outer(np.cos(u), np.sin(v))
-y = 1 * np.outer(np.sin(u), np.sin(v))
-z = 1 * np.outer(np.ones(np.size(u)), np.cos(v))
+x = np.outer(np.cos(u), np.sin(v))
+y = np.outer(np.sin(u), np.sin(v))
+z = np.outer(np.ones(np.size(u)), np.cos(v))
 
 #for i in range(2):
 #    ax.plot_surface(x+random.randint(-5,5), y+random.randint(-5,5), z+random.randint(-5,5),  rstride=4, cstride=4, color='b', linewidth=0, alpha=0.5)
