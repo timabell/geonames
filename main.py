@@ -43,5 +43,11 @@ vert_front = np.linspace(np.pi / 2, 3 * np.pi / 2, 100)
 ax.plot(a[0] * np.sin(vert_front) + b[0] * np.cos(vert_front), b[1] * np.cos(vert_front),
         a[2] * np.sin(vert_front) + b[2] * np.cos(vert_front), color='k')
 
+# draw line from middle to surface
+nodeZ = np.linspace(0, 1, 100)
+nodeX = np.linspace(0, 0, 100)
+nodeY = np.linspace(0, 0, 100)
+ax.plot(nodeX, nodeY, nodeZ, 'green')
+
 ax.view_init(elev=elev, azim=0)
 plt.show()
