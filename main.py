@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# source: https://stackoverflow.com/questions/32424670/python-matplotlib-drawing-3d-sphere-with-circumferences/32427177#32427177
+# based on: https://stackoverflow.com/questions/32424670/python-matplotlib-drawing-3d-sphere-with-circumferences/32427177#32427177
 
 import numpy as np
 import matplotlib.pyplot as plt
