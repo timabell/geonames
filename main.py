@@ -19,8 +19,7 @@ z = np.outer(np.ones(np.size(u)), np.cos(v))
 #for i in range(2):
 #    ax.plot_surface(x+random.randint(-5,5), y+random.randint(-5,5), z+random.randint(-5,5),  rstride=4, cstride=4, color='b', linewidth=0, alpha=0.5)
 
-elev = 10.0
-rot = 80.0 / 180 * np.pi
+elev = 10.0 # viewing angle
 
 # surface of sphere
 ax.plot_surface(x, y, z,  rstride=4, cstride=4, color='b', linewidth=0, alpha=0.25)
@@ -28,6 +27,7 @@ ax.plot_surface(x, y, z,  rstride=4, cstride=4, color='b', linewidth=0, alpha=0.
 #calculate vectors for "vertical" circle
 a = np.array([-np.sin(elev / 180 * np.pi), 0, np.cos(elev / 180 * np.pi)])
 b = np.array([0, 1, 0])
+rot = 80.0 / 180 * np.pi
 b = b * np.cos(rot) + np.cross(a, b) * np.sin(rot) + a * np.dot(a, b) * (1 - np.cos(rot))
 
 # dotted horizontal line
