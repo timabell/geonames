@@ -13,14 +13,13 @@ ax.set_aspect('auto')
 u = np.linspace(0, 2 * np.pi, 100)
 v = np.linspace(0, np.pi, 100)
 
-x = np.outer(np.cos(u), np.sin(v))
-y = np.outer(np.sin(u), np.sin(v))
-z = np.outer(np.ones(np.size(u)), np.cos(v))
-
 elev = 10.0  # viewing angle
 
 # surface of sphere
-ax.plot_surface(x, y, z, rstride=4, cstride=4, color='b', linewidth=0, alpha=0.25)
+surfaceX = np.outer(np.cos(u), np.sin(v))
+surfaceY = np.outer(np.sin(u), np.sin(v))
+surfaceZ = np.outer(np.ones(np.size(u)), np.cos(v))
+ax.plot_surface(surfaceX, surfaceY, surfaceZ, rstride=4, cstride=4, color='b', linewidth=0, alpha=0.25)
 
 # calculate vectors for "vertical" circle
 a = np.array([-np.sin(elev / 180 * np.pi), 0, np.cos(elev / 180 * np.pi)])
